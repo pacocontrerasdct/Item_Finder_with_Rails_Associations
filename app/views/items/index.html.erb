@@ -2,14 +2,13 @@
   <nav>
     <ul>
       <li><%= link_to 'New', '/items/new' %></li>
-      <li><%= link_to 'Edit', '/items/edit' %></li>
-      <li><%= link_to 'Delete', '/items/destroy' %></li>
     </ul>
   </nav>
 
-  <%= @message %>
-
   <% @items.each do |item| %>
-    <h2><%= item.name %></h2>
-    <p><%= item.brand %></p>
+    <span><%= item.name %></span> <span><%= item.brand %></span>
+    <ul>
+      <li><%= link_to 'Edit', '/items/edit' %></li>
+      <li><%= link_to 'Delete', '/items/destroy' %></li>
+    </ul>
   <% end %>
