@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  root to: 'items#index'
+  root 'items#home'
 
   resources :buyers, :items, :shops
 

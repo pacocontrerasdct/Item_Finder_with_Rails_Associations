@@ -7,7 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <% flash.each do |name, msg| -%>
+    <%= content_tag :div, msg, class: name %>
+  <% end %>
+  
+  <nav>
+    <ul>
+      <li><%= link_to 'Shops', 'shops' %></li>
+      <li><%= link_to 'Items', 'items' %></li>
+      <li><%= link_to 'Buyers', 'buyers' %></li>
+    </ul>
+  </nav>
 <%= yield %>
 
 </body>
