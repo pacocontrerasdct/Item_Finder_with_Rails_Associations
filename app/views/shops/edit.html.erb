@@ -1,20 +1,20 @@
-<h1>Shops edit</h1>
+<h1>Edit shop</h1>
 
 <%= form_for @shop do |form| %>
-  <div class="">
+  <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name %>
   </div>
-  <div class="">
+  <div class="field">
     <%= form.label :post_code %>
     <%= form.text_field :post_code %>
   </div>
-  <div class="">
+  <div class="field">
     <%= form.label :opening_hours %>
     <%= form.text_field :opening_hours %>
   </div>
-  <div class="action">
-    <%= form.submit 'Update Shop' %>
+  <div class="field">
+    <%= form.submit 'Update Shop', :class => "action" %>
   </div>
 
 <% end %>

@@ -1,14 +1,15 @@
-<h1>Items index</h1>
+<h1>List of items in the Database</h1>
+<p><%= link_to 'New item?', :new_item, :class => "section" %></p>
+<div class="linethick"></div>
 
-<p>List of items in the Database</p>
-<p><%= link_to 'New', :new_item %></p>
 
-
-  <% @items.each do |item| %>
+<% @items.each do |item| %>
+ <div>
     <span>Product: <%= item.name %></span>
     <span>Brand: <%= item.brand %></span>
     <span>User who created this item: <%= item.buyer_id %></span>
     <span>Shop where user bought this item: <%= item.shop_id %></span>
-    <span><%= link_to 'Show', item %></span>
-    <br>
-  <% end %>
+  </div>
+  <span class="right"><%= link_to 'Show', item %></span>
+  <div class="linethin"></div>
+<% end %>

@@ -1,24 +1,24 @@
-<h1>Items edit</h1>
+<h1>Edit item</h1>
 <div>
 <%= form_for @item do |form| %>
-  <div class="">
+  <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name %>
   </div>
-  <div class="">
+  <div class="field">
     <%= form.label :brand %>
     <%= form.text_field :brand %>
   </div>
-  <div class="">
+  <div class="field">
     <%= form.label :price %>
     <%= form.text_field :price %>
   </div>
-  <div class="">
+  <div class="field">
     <%= form.label :size %>
     <%= form.text_field :size %>
   </div>
-  <div class="action">
-    <%= form.submit 'Update Item' %>
+  <div class="field">
+    <%= form.submit 'Update Item', :class => "action" %>
   </div>
 
 <% end %>

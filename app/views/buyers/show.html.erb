@@ -1,11 +1,26 @@
-<h1>Buyers show ID</h1>
-
-    NAME:
-    <p><%= @buyer.name %></p> 
-    AGE:
-    <p><%= @buyer.age %></p>
+<h1>Buyer ID</h1>
+  <div class="field">
+  <span>NAME: <%= @buyer.name %></span>
+  <div class="linethin"></div>
+  </div>
+  <div class="field">
+  <span>AGE: <%= @buyer.age %></span>
+  <div class="linethin"></div>
+  </div>
+  <div class="field">
+  <span>POST CODE: <%= @buyer.post_code %></span>
+  <div class="linethin"></div>
+  </div>
+  <div class="field">
+  <span>GENRE: <%= @buyer.genre %></span>
+  <div class="linethin"></div>
+  </div>
+  <nav>
     <ul>
-      <li><%= link_to 'Ok', :buyers %></li>
-      <li><%= link_to 'Edit', :edit_buyer %></li>
-      <li><%= link_to 'Delete', @buyer, method: :delete %></li>
+      <li><%= link_to 'Ok', :buyers, :class => "action"   %></li>
+      <li><%= link_to 'Edit', :edit_buyer, :class => "action"   %></li>
+      <li><%= link_to 'Delete', @buyer, method: :delete, :class => "action"   %></li>
     </ul>
+  </nav>
+  
+

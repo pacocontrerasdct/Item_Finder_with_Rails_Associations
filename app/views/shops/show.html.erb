@@ -1,8 +1,20 @@
-<h1>Shops show</h1>
-
-<div>
-  <span>Name: <%= @shop.name %></span>
-  <span>Post Code: <%= @shop.post_code %></span>
-  <span>Opening Hours: <%= @shop.opening_hours %>h</span>
-  <span><%= link_to "Ok", :shops %> <%= link_to "Edit", :edit_shop %> <%= link_to "Delete", @shop, method: :delete %></span>
+<h1>Shop Id</h1>
+<div class="field">
+<span>Name: <%= @shop.name %></span>
+<div class="linethin"></div>
 </div>
+<div class="field">
+<span>Post Code: <%= @shop.post_code %></span>
+<div class="linethin"></div>
+</div>
+<div class="field">
+<span>Opening Hours: <%= @shop.opening_hours %>h</span>
+<div class="linethin"></div>
+</div>
+<nav>
+  <ul>
+    <li><%= link_to "Ok", :shops, :class => "action"   %></li>
+    <li><%= link_to "Edit", :edit_shop, :class => "action"   %></li>
+    <li><%= link_to "Delete", @shop, method: :delete, :class => "action" %></li>
+  </ul>
+</nav>

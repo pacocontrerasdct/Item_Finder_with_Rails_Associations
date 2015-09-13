@@ -1,9 +1,24 @@
-<h1>Items show</h1>
-<div>
-
+<h1>Item</h1>
+  <div class="field">
   <span>Product: <%= @item.name %></span>
+  <div class="linethin"></div>
+  </div>
+  <div class="field">
   <span>Brand: <%= @item.brand %></span>
+  <div class="linethin"></div>
+  </div>
+  <div class="field">
   <span>Price: <%= @item.price %> £</span>
+  <div class="linethin"></div>
+  </div>
+  <div class="field">
   <span>Size: <%= @item.size %></span>
-  <span><%= link_to "Ok", :items %> <%= link_to "Edit", :edit_item %> <%= link_to "Delete", @item, method: :delete %></span>
-</div>
+  <div class="linethin"></div>
+  </div>
+  <nav>
+    <ul>
+      <li><%= link_to "Ok", :items, :class => "action"   %></li>
+      <li><%= link_to "Edit", :edit_item, :class => "action"   %></li>
+      <li><%= link_to "Delete", @item, method: :delete, :class => "action"   %></li>
+    </ul>
+  </nav>

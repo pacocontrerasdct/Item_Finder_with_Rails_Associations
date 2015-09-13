@@ -7,16 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-  <h1>WEB ITEMS FINDER</h1>
-  <% flash.each do |name, msg| -%>
-    <%= content_tag :div, msg, class: name %>
-  <% end %>
-
-  <%= link_to 'Home', '/' %>
-
-<main>
-<%= yield %>
-</main>
+<div id="container">
+  <header>
+    <h1>ITEMS FINDER</h1>
+    <span><%= link_to 'Home', '/', :class => "home" %></span>
+    <% flash.each do |name, msg| -%>
+      <%= content_tag :div, msg, class: name %>
+    <% end %>
+  </header>
+  <main>
+    <%= yield %>
+  </main>
+</div>
 </body>
 </html>

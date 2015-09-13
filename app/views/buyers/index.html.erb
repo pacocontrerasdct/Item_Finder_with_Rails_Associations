@@ -1,13 +1,12 @@
-<h1>Buyers index</h1>
+<h1>List of buyers registered</h1>
+<p><%= link_to 'New buyer?', :new_buyer, :class => "section" %></p>
+<div class="linethick"></div>
 
-<p>List of buyers registered</p>
-<p><%= link_to 'New buyer?', :new_buyer %></p>
 <%= @buyers.each do |buyer| %>
   <div>
-    
-    <span>Name: <%= buyer.name %></span> <span>Age: <%= buyer.age %></span>
-
-    <span><%= link_to 'Edit', buyer %></span>
-    
+    <span>Name: <%= buyer.name %></span>
+    <span>Age: <%= buyer.age %></span>
   </div>
-<% end %>
+  <span class="right"><%= link_to 'Edit', buyer %></span>
+  <div class="linethin"></div>
+<% end %> 
