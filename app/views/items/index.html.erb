@@ -1,15 +1,11 @@
 <h1>Items index</h1>
 
-  <nav>
-    <ul>
-      <li><%= link_to 'New', '/items/new' %></li>
-    </ul>
-  </nav>
+<p>List of items in the Database</p>
+<p><%= link_to 'New', :new_item %></p>
+
 
   <% @items.each do |item| %>
-    <span><%= item.name %></span> <span><%= item.brand %></span>
-    <ul>
-      <li><%= link_to 'Edit', '/items/edit' %></li>
-      <li><%= link_to 'Delete', '/items/destroy' %></li>
-    </ul>
+    <span>Product: <%= item.name %></span>
+    <span>Brand: <%= item.brand %></span>
+    <span><%= link_to 'Show', item %></span>
   <% end %>

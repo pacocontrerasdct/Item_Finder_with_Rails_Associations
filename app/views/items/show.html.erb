@@ -1,3 +1,9 @@
 <h1>Items show</h1>
+<div>
 
-<%= @message %>
+  <span>Product: <%= @item.name %></span>
+  <span>Brand: <%= @item.brand %></span>
+  <span>Price: <%= @item.price %> £</span>
+  <span>Size: <%= @item.size %></span>
+  <span><%= link_to "Ok", :items %> <%= link_to "Edit", :edit_item %> <%= link_to "Delete", @item, method: :delete %></span>
+</div>

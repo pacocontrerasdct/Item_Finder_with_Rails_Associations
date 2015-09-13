@@ -12,30 +12,29 @@ class BuyersController < ApplicationController
     buyer = Buyer.new(buyer_params)
     
     if buyer.save
+      flash[:notice] = 'Buyer created successfully!'
       redirect_to buyer
     else
+      flash.now[:error] = "Error: #{buyer.errors.full_messages}"
       render :new
     end
-
   end
 
   def show
     @buyer = Buyer.find(params[:id])
   end
 
-
-
   def edit
     @buyer = Buyer.find(params[:id])
   end
 
-
-
   def update
-    buyer = Buyer.new(buyer_params) 
-    if buyer.save
+    buyer = Buyer.find(params[:id]) 
+    if buyer.update(buyer_params)
+      flash[:notice] = 'Buyer information updated successfully!'
       redirect_to buyer
     else
+      flash.now[:error] = "Error: #{buyer.errors.full_messages}"
       render :new
     end
   end
@@ -43,27 +42,14 @@ class BuyersController < ApplicationController
   def destroy
     buyer = Buyer.find(params[:id]).destroy
     if buyer
+      flash[:notice] = 'Buyer information deleted successfully!'
       redirect_to '/buyers'
     else
+      flash.now[:error] = "Error: #{buyer.errors.full_messages}"
       render :edit
     end
   end
-
-
-  ##def login
-  ##  # Want to check if buyer is in DB
-  ##  name = params[:buyer][:name]
-  ##  # Finding buyer name in DB
-  ##  @buyers = Buyer.find_by(name: name)
-  ##  
-  ##  if @buyers
-  ##    render :show
-  ##  else
-  ##    render :index
-  ##  end
-  ##end
-
-
+  
   private
   def buyer_params
     params.require(:buyer).permit(:name, :post_code, :genre, :age)
