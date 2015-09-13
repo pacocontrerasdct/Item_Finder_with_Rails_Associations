@@ -1,1 +1,20 @@
 <h1>Shops edit</h1>
+
+<%= form_for @shop do |form| %>
+  <div class="">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+  <div class="">
+    <%= form.label :post_code %>
+    <%= form.text_field :post_code %>
+  </div>
+  <div class="">
+    <%= form.label :opening_hours %>
+    <%= form.text_field :opening_hours %>
+  </div>
+  <div class="action">
+    <%= form.submit 'Update Shop' %>
+  </div>
+
+<% end %>

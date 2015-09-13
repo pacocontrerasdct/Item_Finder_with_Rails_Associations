@@ -42,8 +42,9 @@ class ItemsController < ApplicationController
     item = Item.find(params[:id]).destroy
     if item
       flash[:notice] = 'Item deleted successfully!'
-      redirect_to item
+      redirect_to :items
     else
+      flash.now[:error] = "Error: #{item.errors.full_messages}"
       render :edit
     end
   end

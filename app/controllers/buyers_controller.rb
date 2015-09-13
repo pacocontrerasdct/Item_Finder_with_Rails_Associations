@@ -43,7 +43,7 @@ class BuyersController < ApplicationController
     buyer = Buyer.find(params[:id]).destroy
     if buyer
       flash[:notice] = 'Buyer information deleted successfully!'
-      redirect_to '/buyers'
+      redirect_to :buyers
     else
       flash.now[:error] = "Error: #{buyer.errors.full_messages}"
       render :edit

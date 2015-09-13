@@ -1,1 +1,8 @@
 <h1>Shops show</h1>
+
+<div>
+  <span>Name: <%= @shop.name %></span>
+  <span>Post Code: <%= @shop.post_code %></span>
+  <span>Opening Hours: <%= @shop.opening_hours %>h</span>
+  <span><%= link_to "Ok", :shops %> <%= link_to "Edit", :edit_shop %> <%= link_to "Delete", @shop, method: :delete %></span>
+</div>

@@ -1,15 +1,10 @@
 <h1>Shops index</h1>
-
-  <nav>
-    <ul>
-      <li><%= link_to 'New', '/shop/new' %></li>
-    </ul>
-  </nav>
-
+  
+  <p>List of shops associated to the Database. <span><%= link_to 'New', :new_shop %></span>
+</p>
+  
   <% @shops.each do |shop| %>
-    <span><%= shop.name %></span> <span><%= shop.post_code %></span>
-    <ul>
-      <li><%= link_to 'Edit', '/shop/edit' %></li>
-      <li><%= link_to 'Delete', '/shop/destroy' %></li>
-    </ul>
+    <span>Name of the Shop: <%= shop.name %></span>
+    <span>Post Code: <%= shop.post_code %></span>
+    <span><%= link_to 'Show', shop %></span>
   <% end %>

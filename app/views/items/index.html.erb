@@ -7,5 +7,8 @@
   <% @items.each do |item| %>
     <span>Product: <%= item.name %></span>
     <span>Brand: <%= item.brand %></span>
+    <span>User who created this item: <%= item.buyer_id %></span>
+    <span>Shop where user bought this item: <%= item.shop_id %></span>
     <span><%= link_to 'Show', item %></span>
+    <br>
   <% end %>
