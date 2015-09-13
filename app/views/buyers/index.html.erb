@@ -1,1 +1,15 @@
 <h1>Buyers index</h1>
+
+  <nav>
+    <ul>
+      <li><%= link_to 'New', '/buyer/new' %></li>
+    </ul>
+  </nav>
+
+  <% @buyers.each do |buyer| %>
+    <span><%= buyer.name %>, age: <%= buyer.age %></span>
+    <ul>
+      <li><%= link_to 'Edit', '/buyer/edit' %></li>
+      <li><%= link_to 'Delete', '/buyer/destroy' %></li>
+    </ul>
+  <% end %>

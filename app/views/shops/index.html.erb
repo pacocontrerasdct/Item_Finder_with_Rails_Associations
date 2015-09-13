@@ -1,1 +1,15 @@
 <h1>Shops index</h1>
+
+  <nav>
+    <ul>
+      <li><%= link_to 'New', '/shop/new' %></li>
+    </ul>
+  </nav>
+
+  <% @shops.each do |shop| %>
+    <span><%= shop.name %></span> <span><%= shop.post_code %></span>
+    <ul>
+      <li><%= link_to 'Edit', '/shop/edit' %></li>
+      <li><%= link_to 'Delete', '/shop/destroy' %></li>
+    </ul>
+  <% end %>

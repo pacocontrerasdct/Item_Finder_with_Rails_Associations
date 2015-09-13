@@ -7,17 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+  <h1>WEB ITEMS FINDER</h1>
   <% flash.each do |name, msg| -%>
     <%= content_tag :div, msg, class: name %>
   <% end %>
-  
-  <nav>
-    <ul>
-      <li><%= link_to 'Shops', 'shops' %></li>
-      <li><%= link_to 'Items', 'items' %></li>
-      <li><%= link_to 'Buyers', 'buyers' %></li>
-    </ul>
-  </nav>
+
+  <%= link_to 'Home', '/' %>
+
+
 <%= yield %>
 
 </body>
