@@ -2,8 +2,32 @@ Rails.application.routes.draw do
   
   root 'items#home'
 
-  resources :buyers, :items, :shops
+  get '/buyers' => 'buyers#index', as: 'buyers'
+  post '/buyers' => 'buyers#create'
+  get '/buyers/new' => 'buyers#new', as: 'new_buyer'
+  get '/buyers/:id/edit' => 'buyers#edit', as: 'edit_buyer'
+  get '/buyers/:id' => 'buyers#show', as: 'buyer'
+  put '/buyers/:id' => 'buyers#update'
+  patch '/buyers/:id' => 'buyers#update'
+  delete '/buyers/:id' => 'buyers#destroy'
 
+  get '/items' => 'items#index', as: 'items'
+  post '/items' => 'items#create'
+  get '/items/new' => 'items#new', as: 'new_item'
+  get '/items/:id/edit' => 'items#edit', as: 'edit_item'
+  get '/items/:id' => 'items#show', as: 'item'
+  put '/items/:id' => 'items#update'
+  patch '/items/:id' => 'items#update'
+  delete '/items/:id' => 'items#destroy'
+
+  get '/shops' => 'shops#index', as: 'shops'
+  post '/shops' => 'shops#create'
+  get '/shops/new' => 'shops#new', as: 'new_shop'
+  get '/shops/:id/edit' => 'shops#edit', as: 'edit_shop'
+  get '/shops/:id' => 'shops#show', as: 'shop'
+  put '/shops/:id' => 'shops#update'
+  patch '/shops/:id' => 'shops#update'
+  delete '/shops/:id' => 'shops#destroy'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

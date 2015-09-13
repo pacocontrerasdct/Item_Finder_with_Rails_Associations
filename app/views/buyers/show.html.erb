@@ -1,1 +1,11 @@
-<h1>Buyers show</h1>
+<h1>Buyers show ID</h1>
+
+    NAME:
+    <p><%= @buyer.name %></p> 
+    AGE:
+    <p><%= @buyer.age %></p>
+    <ul>
+      <li><%= link_to 'Ok', :buyers %></li>
+      <li><%= link_to 'Edit', :edit_buyer %></li>
+      <li><%= link_to 'Delete', @buyer, method: :delete %></li>
+    </ul>

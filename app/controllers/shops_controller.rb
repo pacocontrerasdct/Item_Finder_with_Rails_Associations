@@ -8,4 +8,5 @@ class ShopsController < ApplicationController
 
 
 
+
 end

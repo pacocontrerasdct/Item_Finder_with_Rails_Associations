@@ -12,8 +12,8 @@ sh2 = Shop.create(name: 'Morrison', post_code: 'E17 6SE', opening_hours: '08:00-
 sh3 = Shop.create(name: 'Lidl', post_code: 'E10 7EE', opening_hours: '09:00-17:00')
 sh4 = Shop.create(name: 'Savers', post_code: 'E11 5TE', opening_hours: '09:00-18:00')
 
-by1 = Buyer.create(name: 'John Doe', post_code: 'E17 6DE', genre: 'Male', age: 45)
-by2 = Buyer.create(name: 'Jane Doe', post_code: 'E11 6DE', genre: 'Female', age: 25)
+by1 = Buyer.create(name: 'john', post_code: 'E17 6DE', genre: 'male', age: 45)
+by2 = Buyer.create(name: 'jane', post_code: 'E11 6DE', genre: 'female', age: 25)
 
 sh1.items.create(name: 'Milk', brand: 'Tesco', price: '1', size: '1', buyer_id: 1)
 sh2.items.create(name: 'Beer', brand: 'Carlsberg', price: '1.2', size: '440ml', buyer_id: 1)
